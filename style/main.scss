@@ -297,6 +297,110 @@ header{
 }
 
 
+.whereIvework{
+    width: 80%;
+    margin: 50px auto;
+        .main-title{
+            position: relative;
+            color: $altColor;
+            font-family: 'M PLUS Code Latin', sans-serif;
+            font-size: 28px;
+            span{
+                font-size: 22px;
+                color: $mainColor;
+                font-family: 'M PLUS Code Latin', sans-serif;
+        
+            }
+        
+            div::after{
+                content:"" ;
+                position: absolute;
+                right:43%;
+                top:47%;
+                transform: translateY(50%);
+                width:300px;
+                height: 0.1px;
+                opacity: 0.5;
+                border-radius: 50px;
+                 background-color: $altColor;
+            }
+        }
+
+        .container{ 
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 40px;
+            margin: 40px 40px;
+            .work{
+                transition: 0.3s;
+                margin-top: 15px;
+                border-radius: 5px;
+                font-size: 14px;
+                color: $altColor3;
+                transition: 0.3s;
+                padding: 20px 20px;
+            }
+            .content{
+                .title{
+                    a{
+                        text-decoration: none;
+                        color: $mainColor;
+                    }
+                    span{
+                        color:$altColor;
+                    }
+                }
+                .time{
+                    font-size: 14px;
+                    color: $altColor2;
+                }
+                .moreInfo{
+                    ul{
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                       li{
+                        display: flex;
+                        gap:18px;
+                        justify-content: center;
+                        align-items: center;
+                        color: $altColor3;
+                        width: 400px;
+                        line-height:18px;
+                       }
+                    }
+                }
+            }
+           
+        
+        
+        
+        
+        }
+        
+        .container::before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 300px;
+            background-color: $altColor3;
+            left: -15px;
+            top: 0;
+        }
+        .container::after{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 55px;
+            background-color: $mainColor;
+            left: -15px;
+            top: 16px;
+        }
+
+}
 
 
 
@@ -306,6 +410,7 @@ header{
     margin: 250px auto;
     width: 80%;    
     .main-title{
+
         position: relative;
         color: $altColor;
         font-family: 'M PLUS Code Latin', sans-serif;
@@ -613,7 +718,10 @@ section{
     align-items: flex-start;
     margin: 100px 30px;
     position: fixed;
+
+    a{
     color: white;
+    }
     i{
         width: 200px;
     }
@@ -803,6 +911,11 @@ section::after{
 }
 
 .addAnim{
-    animation: landingAnim 0.7s ease-out forwards;
+    animation: landingAnim 0.5s ease-out forwards;
 
+}
+
+.active{
+    color: $mainColor!important ;
+    background-color: #11224077 !important;
 }
