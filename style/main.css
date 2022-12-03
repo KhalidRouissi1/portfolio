@@ -1138,3 +1138,202 @@ section::after {
   color: #64ffda !important;
   background-color: rgba(17, 34, 64, 0.4666666667) !important;
 }
+
+/* Responsive  */
+
+
+
+
+@media (max-width : 450px) {
+  
+
+
+
+
+
+  .landing .container  {
+    margin:0 0 0 30px ;
+    width:300px;
+  }
+  .landing .container .l2 {
+
+    font-size: 30px;
+    width:300px;
+  }
+
+  .landing .container .l3 {
+    width:300px;
+    font-size:30px;
+
+  }
+
+  .landing .container .l4 {
+    width:300px;
+    font-size:20px;
+    line-height: 30px;
+
+  }
+  header .container i{
+    display: initial;
+  }
+
+  .boxTwo{
+    display: none;
+    margin:0 0 0 30px ;
+
+  }
+  .whereIvework .main-title div::after {
+    content: "";  
+    display:none ;
+    
+  }
+  .whereIvework{
+    margin: 40px 0 0 60px;
+
+  }
+
+  .whereIvework .container{
+    margin:0;
+  }
+
+  .whereIvework .container h3{
+    width: 200px;
+  }
+
+.moreInfo{
+  display: none;
+}
+
+
+.someThings{
+  margin: 250px 0 0 60px;
+}
+.someThings .main-title div::after {
+  content: "";  
+  display:none ;
+  
+}
+
+
+.someThings .leftBox .info{
+  visibility: hidden;
+}
+
+
+
+.someThings .rightBox .info{
+  visibility: hidden;
+}
+
+
+
+
+.otherProjects .parent{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.otherProjects .parent .div1 p{
+  width: 200px;
+  line-height: 20px;
+}
+.otherProjects .parent .div2 p{
+  width: 200px;
+  line-height: 20px;
+}
+.otherProjects .parent .div3 p{
+  width: 200px;
+  line-height: 20px;
+}
+.otherProjects .parent .div4 p{
+  width: 200px;
+  line-height: 20px;
+}
+
+
+.getInTouch .title {
+  font-size: 30px;
+  width: 500px;
+  margin: 0 0 0  250px;
+}
+
+
+
+
+
+.getInTouch h1{
+  width: 400px;
+  margin: 20px 0 0  250px;
+
+}
+
+
+.getInTouch p{
+  width: 400px;
+  margin: 20px 0 0  0px;
+  font-size: 14px;
+
+  
+}
+.someThings .container .leftBox .image{
+  width: 200px;
+}
+.someThings .container .leftBox .image img{
+  width: 300px;
+}
+.someThings .container .leftBox .image div{
+  width: 300px;
+  height: 150px;
+}
+
+
+.someThings .container .rightBox {
+display: flex;
+flex-direction: column;
+
+}
+.someThings .container .rightBox .image {
+  order: -1;
+}
+.someThings .container .rightBox .info {
+  width: 0px;
+  height: 0px;
+}
+.someThings .container .rightBox .image img{
+  width: 300px;
+}
+.someThings .container .rightBox .image div{
+  width: 300px;
+  height: 150px;
+}
+
+
+.email{
+
+display:none;
+}
+
+header{
+
+  width: 450px;
+}
+
+.BigContainer{
+  width:80%;
+  margin: 0 auto;
+}
+}
+
+@media (max-width:1300px) {
+  .aboutMe {
+    margin: 0 0 0 60px;
+  }
+  .aboutMe .main-title div::after {
+    content: "";  
+    display:none ;
+    
+  }
+
+
+  
+}
