@@ -25,10 +25,22 @@
 <body>
 
 
+
+
     <header>
         <div class="container">
             <div class="logo"><img src="assets/logo.png" alt=""></div>
-            <ul>
+            <i class="fa-solid fa-bars menuBtn" ></i>
+            <div class="dropDownMenu">
+                <div class="dropDownMenuUl">
+                    <li><a href="#About"><span>01.</span>About</a></li>
+                    <li><a href="#Experience"><span>02.</span>Experience</a></li>
+                    <li><a href="#Work"><span>03.</span>Work</a></li>
+                    <li><a href="#Contact"><span>04.</span>Contact</a></li>
+                 
+                 </div> 
+            </div>
+            <ul class="mainMenu">
                <li><a href="#About"><span>01.</span>About</a></li>
                <li><a href="#Experience"><span>02.</span>Experience</a></li>
                <li><a href="#Work"><span>03.</span>Work</a></li>
@@ -39,6 +51,7 @@
         </div>
         
     </header>
+
 
     <section>
         <a href="https://github.com/KhalidRouissi1" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -51,12 +64,14 @@
         
         <a href="mailto:khalidrouissi7@gmail.com" target="_blank">khalidrouissi7@gmail.com</a>
     </div>
-    <div class="BigContainer">
+
+
+
     <div class="landing">
         <div class="container">
             <span class="l1">Hi, My name is</span>
             <h2 class="l2 auto-type">Khalid Rouissi. <br></h2>
-            <span class="l3">I build things for the web and mobile</span>
+            <span class="l3">I'm Systems, Apps builder  </span>
             <p class="l4">I'm a student but I call myself a beginner software engineer specializing in building  websites app and mobile apps. I believe in Learning is never end Learning is a life cycle</p>
             <button><a target="_blank" href="assets/cv.pdf">Download my cv </a></button>
         </div>
@@ -163,17 +178,19 @@
         </div>
     </div>
     
-</div>
    
 
-<div class="someThings" id="Work">
+     <div class="someThings">
+     
+
     <div class="main-title">
         <div>
             <span>03.</span>Some Things I’ve Built
 
         </div>
     </div>
-    <div class="container">
+
+    <div class="container normalThingsMode">
         <div class="leftBox firstLeftBox">
             <div class="image">
                 <img src="assets/cbc.jpg" alt="">
@@ -213,7 +230,7 @@
                 <img src="assets/starbucks.jpg" alt="">
                 <div></div>
             </div>
-        </div>
+        </div> 
 
 
         <div class="leftBox">
@@ -236,46 +253,43 @@
             </div>
         </div>
     </div>
-</div>
-<div class="otherProjects">
+</div> 
+<div class="otherProjects" id="Work">
     <h2>Other Projects</h2>
-    <span class="under-t">view the archive</span>
+    <span class="under-t">View the archive</span>
 
-        <div class="parent">
-            <div class="div1"> 
-
-                <div class="top">
-                    <i class="fa-solid fa-folder  fa-3x"></i>
-                    <span>
-                      
-                        <a href="https://khalidrouissi1.github.io/CRUD-Products-App/" target="_blank">  <i class="fa-solid fa-up-right-from-square"></i></a>
-                        <a href="https://github.com/KhalidRouissi1/CRUD-Products-App" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    </span>         </div>
-                <h3>CRUD products app</h3>
-                <p>A single page app for products managment, you can learn from this app how to manipulate in js localstorege </p>
+    <div class="parent">
+        <div class="div1">
+            <div class="top">
+                <i class="fa-solid fa-folder fa-3x"></i>
                 <span>
-                    <span>Html</span>
-                    <span>Scss</span>
-                    <span>Js</span>
+                    <a href="https://khalidrouissi1.github.io/CRUD-Products-App/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://github.com/KhalidRouissi1/CRUD-Products-App" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </span>
-
-
             </div>
-        <div class="div2"> 
+            <h3>CRUD products app</h3>
+            <p>A single page app for product management. Learn how to manipulate local storage with JavaScript.</p>
+            <span>
+                <span>HTML</span>
+                <span>SCSS</span>
+                <span>JS</span>
+            </span>
+        </div>
+        <div class="div2">
             <div class="top">
                 <i class="fa-solid fa-folder fa-3x"></i>
                 <span>
                     <a target="_blank" href="https://github.com/KhalidRouissi1/News-Paper-App-Phone-"><i class="fa-brands fa-github"></i></a>
-               
-                </span>             </div>
-             <h3>News paper app</h3>
-             <p>A application using Flutter, it gives you news from 'News API' and deploy them as a scrolling column </p>
-             <span>
+                </span>
+            </div>
+            <h3>News paper app</h3>
+            <p>An application using Flutter that displays news from the 'News API' as a scrolling column.</p>
+            <span>
                 <span>Flutter</span>
-                <span>Duo</span>
-             </span>
+                <span>Dart</span>
+            </span>
         </div>
-        <div class="div3"> 
+        <div class="div3">
             <div class="top">
                 <i class="fa-solid fa-folder fa-3x"></i>
                 <span>
@@ -283,31 +297,29 @@
                     <i class="fa-brands fa-github"></i>
                 </span>
             </div>
-             <h3>Bondi</h3>
-             <p>A single page app Using Bootstrap</p>
-             <span>
-                 <span>Html</span>
+            <h3>Bondi</h3>
+            <p>A single-page app using Bootstrap.</p>
+            <span>
+                <span>HTML</span>
                 <span>Bootstrap</span>
-             </span>
+            </span>
         </div>
         <div class="div4">
-
             <div class="top">
                 <i class="fa-solid fa-folder fa-3x"></i>
                 <span>
-                     <a href="https://github.com/KhalidRouissi/BacPratique" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    
-                </span>             
+                    <a href="https://github.com/KhalidRouissi1/BacPratique" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </span>
             </div>
-             <h3>Algo Bac(2008-2021)</h3>
-             <p>All Pratic Tunisian Bac Exams using Python</p>
-             <span>
+            <h3>Algo Bac (2008-2021)</h3>
+            <p>All practical Tunisian Bac exams using Python.</p>
+            <span>
                 <span>Python</span>
-             
-             </span>
-             </div>
+            </span>
         </div>
     </div>
+</div>
+
 </div>
 
 <div class="getInTouch " >

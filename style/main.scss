@@ -45,6 +45,54 @@ header{
                 width: 50px;
             }
         }
+        .menuBtn
+        {
+            display: none;
+        }
+
+        .dropDownMenu
+        {
+            position: absolute;
+            top: 79px;
+            z-index: 10;
+            left: 60%;
+            background-color: white;
+            width: fit-content;
+            padding: 20px;
+            padding-bottom: -5px;
+            height: 200px;
+            display: none;
+            .dropDownMenuUl{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 25px; 
+                align-items: center;
+        
+                li{
+                    a{
+                        span{
+                            color: $mainColor;
+                        font-family: 'M PLUS Code Latin', sans-serif;
+                        }
+                        text-decoration: none;
+                        color:$altColor2 ;
+                        font-size: 15px;
+                        transition: 0.5s;
+                        font-family: 'M PLUS Code Latin', sans-serif;
+                    }
+                }
+                li{
+                    a:hover{
+                        color: $mainColor;
+                    }
+                }
+            
+            }
+        
+        }
+
         ul{
             animation: landingAnim 0.7s ease-out forwards;
             list-style: none;
@@ -95,6 +143,65 @@ header{
     }
     
 }
+header {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+header .container .logo img {
+    transition: 0.3s;
+    animation: logoAnim 0.8s ease-out forwards;
+    width: 50px;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    header .container {
+        width: 80%;
+        position: relative;
+    }
+
+    header .container .menuBtn {
+        position: absolute;
+        left: 85%;
+        top: 0px;
+        cursor: pointer;
+        display: block;
+        color: $mainColor; /* Use your actual color variable */
+        font-size: 30px;
+    }
+
+    header .container .dropDownMenu {
+        position: absolute;
+        top: 79px;
+        left: 60%;
+        z-index: 10;
+        background-color: white;
+        width: fit-content;
+        padding: 20px;
+        height: 200px;
+        display: none;
+    }
+
+    header .container .mainMenu {
+        visibility: hidden;
+        position: absolute;
+        top: 79px;
+        right: 0;
+        background-color: white; /* Adjust the background color as needed */
+        padding: 20px;
+        display: none;
+    }
+}
+
 
 .landing{
     
@@ -158,7 +265,6 @@ header{
         }
     }
 }
-
 
 .aboutMe{
     .main-title{
@@ -297,6 +403,7 @@ header{
 }
 
 
+
 .whereIvework{
     width: 80%;
     margin: 50px auto;
@@ -402,6 +509,36 @@ header{
 
 }
 
+@media (max-width: 768px) {
+    .landing .container .l2 {
+        font-size: 30px;
+        width: 80%;
+    }
+    .landing .container .l3 {
+        font-size: 30px;
+        width: 70%;
+    }
+    .landing .container .l4 {
+        width: 70%;
+    }
+
+    /* About me */
+    .main-title div::after {
+        content: "";
+        display: none;
+    }
+    .aboutMe .container .boxTwo {
+        display: none;
+    }
+
+    /* Where I've worked */
+    .whereIvework {
+        width: 90%;
+    }
+    .whereIvework .container .content .moreInfo ul li {
+        width: 90%;
+    }
+}
 
 
 
@@ -772,6 +909,22 @@ section::after{
     border-radius: 50px;
      background-color: $altColor;
 }
+
+@media (max-width: 768px) { 
+    section{
+    display: none;
+    }
+    .email{
+        display: none;
+    }
+
+
+.someThings
+{
+display: none;
+
+}
+}
 .otherProjects{
     width: 80%;
     margin: 50px auto;
@@ -875,6 +1028,20 @@ section::after{
         // bottom: 0;
         opacity: 1
 
+    }
+}
+/* Add media query for responsiveness */
+@media (max-width: 767px) {
+    .otherProjects .parent {
+        display: block; /* Display items as a single column */
+    }
+    /* Remove grid-related styles for responsiveness */
+    .otherProjects .parent div {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        flex-direction: column;
+    
     }
 }
 

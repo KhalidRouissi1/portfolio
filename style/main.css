@@ -47,6 +47,55 @@ header .container .logo img {
           animation: logoAnim 0.8s ease-out forwards;
   width: 50px;
 }
+header .container .menuBtn {
+  display: none;
+}
+header .container .dropDownMenu {
+  position: absolute;
+  top: 79px;
+  z-index: 10;
+  left: 60%;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  padding-bottom: -5px;
+  height: 200px;
+  display: none;
+}
+header .container .dropDownMenu .dropDownMenuUl {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .container .dropDownMenu .dropDownMenuUl li a {
+  text-decoration: none;
+  color: #8892b0;
+  font-size: 15px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "M PLUS Code Latin", sans-serif;
+}
+header .container .dropDownMenu .dropDownMenuUl li a span {
+  color: #64ffda;
+  font-family: "M PLUS Code Latin", sans-serif;
+}
+header .container .dropDownMenu .dropDownMenuUl li a:hover {
+  color: #64ffda;
+}
 header .container ul {
   -webkit-animation: landingAnim 0.7s ease-out forwards;
           animation: landingAnim 0.7s ease-out forwards;
@@ -94,6 +143,72 @@ header .container ul button:hover {
   background-color: rgba(100, 255, 218, 0.2117647059);
 }
 
+header {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  width: 90%;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Logo styles */
+header .container .logo img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: logoAnim 0.8s ease-out forwards;
+          animation: logoAnim 0.8s ease-out forwards;
+  width: 50px;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  header .container {
+    width: 80%;
+    position: relative;
+  }
+  header .container .menuBtn {
+    position: absolute;
+    left: 85%;
+    top: 0px;
+    cursor: pointer;
+    display: block;
+    color: #64ffda; /* Use your actual color variable */
+    font-size: 30px;
+  }
+  header .container .dropDownMenu {
+    position: absolute;
+    top: 79px;
+    left: 60%;
+    z-index: 10;
+    background-color: white;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 20px;
+    height: 200px;
+    display: none;
+  }
+  header .container .mainMenu {
+    visibility: hidden;
+    position: absolute;
+    top: 79px;
+    right: 0;
+    background-color: white; /* Adjust the background color as needed */
+    padding: 20px;
+    display: none;
+  }
+}
 .landing {
   width: 80%;
   margin: 50px auto;
@@ -473,6 +588,34 @@ header .container ul button:hover {
   top: 16px;
 }
 
+@media (max-width: 768px) {
+  .landing .container .l2 {
+    font-size: 30px;
+    width: 80%;
+  }
+  .landing .container .l3 {
+    font-size: 30px;
+    width: 70%;
+  }
+  .landing .container .l4 {
+    width: 70%;
+  }
+  /* About me */
+  .main-title div::after {
+    content: "";
+    display: none;
+  }
+  .aboutMe .container .boxTwo {
+    display: none;
+  }
+  /* Where I've worked */
+  .whereIvework {
+    width: 90%;
+  }
+  .whereIvework .container .content .moreInfo ul li {
+    width: 90%;
+  }
+}
 .someThings {
   margin: 250px auto;
   width: 80%;
@@ -883,6 +1026,17 @@ section::after {
   background-color: #ccd6f6;
 }
 
+@media (max-width: 768px) {
+  section {
+    display: none;
+  }
+  .email {
+    display: none;
+  }
+  .someThings {
+    display: none;
+  }
+}
 .otherProjects {
   width: 80%;
   margin: 50px auto;
@@ -1069,6 +1223,24 @@ section::after {
     opacity: 1;
   }
 }
+/* Add media query for responsiveness */
+@media (max-width: 767px) {
+  .otherProjects .parent {
+    display: block; /* Display items as a single column */
+  }
+  /* Remove grid-related styles for responsiveness */
+  .otherProjects .parent div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 @-webkit-keyframes logoAnim {
   0% {
     -webkit-transform: scale(0);
@@ -1137,203 +1309,4 @@ section::after {
 .active {
   color: #64ffda !important;
   background-color: rgba(17, 34, 64, 0.4666666667) !important;
-}
-
-/* Responsive  */
-
-
-
-
-@media (max-width : 450px) {
-  
-
-
-
-
-
-  .landing .container  {
-    margin:0 0 0 30px ;
-    width:300px;
-  }
-  .landing .container .l2 {
-
-    font-size: 30px;
-    width:300px;
-  }
-
-  .landing .container .l3 {
-    width:300px;
-    font-size:30px;
-
-  }
-
-  .landing .container .l4 {
-    width:300px;
-    font-size:20px;
-    line-height: 30px;
-
-  }
-  header .container i{
-    display: initial;
-  }
-
-  .boxTwo{
-    display: none;
-    margin:0 0 0 30px ;
-
-  }
-  .whereIvework .main-title div::after {
-    content: "";  
-    display:none ;
-    
-  }
-  .whereIvework{
-    margin: 40px 0 0 60px;
-
-  }
-
-  .whereIvework .container{
-    margin:0;
-  }
-
-  .whereIvework .container h3{
-    width: 200px;
-  }
-
-.moreInfo{
-  display: none;
-}
-
-
-.someThings{
-  margin: 250px 0 0 60px;
-}
-.someThings .main-title div::after {
-  content: "";  
-  display:none ;
-  
-}
-
-
-.someThings .leftBox .info{
-  visibility: hidden;
-}
-
-
-
-.someThings .rightBox .info{
-  visibility: hidden;
-}
-
-
-
-
-.otherProjects .parent{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-.otherProjects .parent .div1 p{
-  width: 200px;
-  line-height: 20px;
-}
-.otherProjects .parent .div2 p{
-  width: 200px;
-  line-height: 20px;
-}
-.otherProjects .parent .div3 p{
-  width: 200px;
-  line-height: 20px;
-}
-.otherProjects .parent .div4 p{
-  width: 200px;
-  line-height: 20px;
-}
-
-
-.getInTouch .title {
-  font-size: 30px;
-  width: 500px;
-  margin: 0 0 0  250px;
-}
-
-
-
-
-
-.getInTouch h1{
-  width: 400px;
-  margin: 20px 0 0  250px;
-
-}
-
-
-.getInTouch p{
-  width: 400px;
-  margin: 20px 0 0  0px;
-  font-size: 14px;
-
-  
-}
-.someThings .container .leftBox .image{
-  width: 200px;
-}
-.someThings .container .leftBox .image img{
-  width: 300px;
-}
-.someThings .container .leftBox .image div{
-  width: 300px;
-  height: 150px;
-}
-
-
-.someThings .container .rightBox {
-display: flex;
-flex-direction: column;
-
-}
-.someThings .container .rightBox .image {
-  order: -1;
-}
-.someThings .container .rightBox .info {
-  width: 0px;
-  height: 0px;
-}
-.someThings .container .rightBox .image img{
-  width: 300px;
-}
-.someThings .container .rightBox .image div{
-  width: 300px;
-  height: 150px;
-}
-
-
-.email{
-
-display:none;
-}
-
-header{
-
-  width: 450px;
-}
-
-.BigContainer{
-  width:80%;
-  margin: 0 auto;
-}
-}
-
-@media (max-width:1300px) {
-  .aboutMe {
-    margin: 0 0 0 60px;
-  }
-  .aboutMe .main-title div::after {
-    content: "";  
-    display:none ;
-    
-  }
-
-
-  
 }
